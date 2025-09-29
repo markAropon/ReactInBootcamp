@@ -36,23 +36,22 @@ function Stopwatch() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center border p-6 rounded-lg shadow-lg">
-            <h1 className="text-2xl font-bold mb-4">Stopwatch</h1>
-            <p className="text-7xl mb-4">{formatTime()}</p>
-            <div className="flex gap-4">
+        <div className="flex flex-col items-center justify-center">
+            <p className="text-5xl font-mono mb-4">{formatTime()}</p>
+            <div className="flex gap-3">
                 <button 
                     id="toggle-button"
-                    className={`border px-4 py-2 rounded ${
+                    className={`border px-4 py-2 rounded-md ${
                         isRunning   
                         ? "border-green-800 text-white bg-green-800" 
-                        : "border-green-800 text-green bg-white-800"
+                        : "border-green-800 text-green-800 bg-white"
                     }`}
                     onClick={toggleTimer}
                 >
                     {isRunning ? "Pause" : (time > 0 ? "Resume" : "Start")}
                 </button>
                 <button
-                    className="border border-blue-800 px-4 py-2 rounded bg-blue-700 text-white"
+                    className="border border-blue-800 px-4 py-2 rounded-md bg-blue-700 text-white disabled:opacity-50 disabled:cursor-not-allowed"
                     onClick={resetTimer}
                     disabled={time === 0}
                 >

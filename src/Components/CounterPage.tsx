@@ -21,17 +21,14 @@ function CounterPage() {
   };
 
   return (
-    <>
-      <div className="flex flex-col items-center justify-center border p-6 rounded-lg shadow-lg">
-        <h1 className="text-xl font-bold mb-4">Counter Page</h1>
-        <p className="text-7xl mb-4">{count}</p>
-        <div className="flex gap-5 mb-4">
-          <Button color="green" label="+" onClick={Add} />
-          <Button color="red" label="Reset" onClick={Reset} />
-          <Button color="blue" label="-" onClick={Subtract} />
-        </div>
+    <div className="flex flex-col items-center justify-center">
+      <p className="text-6xl mb-4">{count}</p>
+      <div className="flex gap-4 mb-2">
+        <Button color="green" label="+" onClick={Add} />
+        <Button color="red" label="Reset" onClick={Reset} />
+        <Button color="blue" label="-" onClick={Subtract} />
       </div>
-    </>
+    </div>
   );
 }
 export default CounterPage;

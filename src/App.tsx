@@ -1,16 +1,18 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import CounterPage from './Components/CounterPage'
-import Stopwatch from './Components/Stopwatch'
+import TypingTest from './pages/TypingTest'
+import Home from './pages/Home'
 
 function App() {
-
   return (
-    <>
-    <div style={{display: 'flex', justifyContent: 'space-around',gap:'50px'}}>
-      <Stopwatch />
-      <CounterPage />
-      </div>
-    </>
+    <BrowserRouter>
+      <main className="mx-auto py-6 px-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/typing" element={<TypingTest />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   )
 }
 
