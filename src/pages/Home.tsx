@@ -18,7 +18,6 @@ function Home() {
             React in BootCamp - A collection of React projects and components activities.
           </p>
         </header>
-
         {/* Feature Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link to="/typing" className="group">
@@ -42,29 +41,45 @@ function Home() {
 
         {/* Widgets Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition">
-            <h2 className="text-xl font-bold text-neutral-800 mb-4">Counter</h2>
-            <CounterPage />
+          <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-neutral-800 mb-4">Counter</h2>
+            </div>
+            <div className="flex-grow flex items-center justify-center">
+              <CounterPage />
+            </div>
           </div>
 
           <AgeProvider>
-            <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition">
-              <h2 className="text-xl font-bold text-neutral-800 mb-4">
-                Age Setter <br />
-                <span className="text-sm text-neutral-500">(useReducer + Context)</span>
-              </h2>
-              <AgeSetter />
+            <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
+              <div className="mb-4">
+                <h2 className="text-xl font-bold text-neutral-800 mb-2">
+                  Age Setter <br />
+                  <span className="text-sm text-neutral-500">(useReducer + Context)</span>
+                </h2>
+              </div>
+              <div className="flex-grow flex items-center justify-center">
+                <AgeSetter />
+              </div>
             </div>
           </AgeProvider>
 
-          <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition">
-            <h2 className="text-xl font-bold text-neutral-800 mb-4">Stopwatch</h2>
-            <Stopwatch />
+          <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-neutral-800 mb-4">Stopwatch</h2>
+            </div>
+            <div className="flex-grow flex items-center justify-center">
+              <Stopwatch />
+            </div>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition">
-            <h2 className="text-xl font-bold text-neutral-800 mb-4">Dog Image</h2>
-            <DogAxios />
+          <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold text-neutral-800 mb-4">Dog Image</h2>
+            </div>
+            <div className="flex-grow flex items-center justify-center">
+              <DogAxios />
+            </div>
           </div>
         </div>
       </div>

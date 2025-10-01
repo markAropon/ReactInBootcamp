@@ -36,9 +36,11 @@ function Stopwatch() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <p className="text-5xl font-mono mb-4">{formatTime()}</p>
-            <div className="flex gap-3">
+        <div className="flex flex-col items-center justify-between h-full w-full">
+            <div className="flex-grow flex items-center justify-center">
+                <p className="text-5xl font-mono">{formatTime()}</p>
+            </div>
+            <div className="flex gap-3 justify-center w-full mt-4">
                 <button 
                     id="toggle-button"
                     className={`border px-4 py-2 rounded-md ${

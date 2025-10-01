@@ -51,9 +51,11 @@ const AgeSetter: React.FC = () => {
     const { state, dispatch } = useAge();
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <h2 className='text-6xl mb-4'>{state.age}</h2>
-            <div className="flex gap-4 mb-2">
+        <div className="flex flex-col items-center justify-between h-full w-full">
+            <div className="flex-grow flex items-center justify-center">
+                <h2 className='text-6xl'>{state.age}</h2>
+            </div>
+            <div className="flex gap-4 justify-center w-full mt-4">
                 <Button color="green" label="-" onClick={() => dispatch({ type: 'DECREMENT' })} />
                 <Button color="red" label="Reset" onClick={() => dispatch({ type: 'RESET' })} />
                 <Button color="blue" label="+" onClick={() => dispatch({ type: 'INCREMENT' })} />

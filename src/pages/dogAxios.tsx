@@ -24,24 +24,26 @@ function DogAxios() {
     }, []);
 
   return (
-    <>
-    <div className="mb-4">
+    <div className="flex flex-col items-center justify-between h-full w-full">
+      <div className="flex-grow flex items-center justify-center w-full overflow-hidden">
         {isLoading ? (
-            <div className="flex justify-center items-center h-[300px]">
+            <div className="flex justify-center items-center h-full">
                 <p>Loading...</p>
             </div>
         ) : (
-            dogImage && <img src={dogImage} alt="Random dog" className="max-w-[300px] max-h-[300px] object-contain mx-auto" />
+            dogImage && <img src={dogImage} alt="Random dog" className="max-w-full max-h-[140px] object-contain" />
         )}
+      </div>
+      <div className="w-full mt-4 flex justify-center">
+        <button 
+          onClick={fetchDogImage}
+          className="px-3 py-1.5 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors text-sm"
+          disabled={isLoading}
+        >
+          {isLoading ? 'Fetching...' : 'Fetch New Dog'}
+        </button>
+      </div>
     </div>
-      <button 
-        onClick={fetchDogImage}
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-        disabled={isLoading}
-      >
-        {isLoading ? 'Fetching...' : 'Fetch New Dog'}
-      </button>
-    </>
   );
 }
 export default DogAxios;
