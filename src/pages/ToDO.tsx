@@ -3,8 +3,8 @@ import {
   Footer, 
   TodoProvider, 
   TodoSidebar, 
-  TodoListView
-} from "../Components/ToDo/Index";
+  TodoListView 
+} from "../Components/ToDo/barrel";
 import PageAnimation from "@/common/PageAnimation";
 
 function ToDo() {
