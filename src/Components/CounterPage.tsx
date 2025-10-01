@@ -24,9 +24,11 @@ function CounterPage() {
     <div className="flex flex-col items-center justify-center">
       <p className="text-6xl mb-4">{count}</p>
       <div className="flex gap-4 mb-2">
-        <Button color="green" label="+" onClick={Add} />
+        <Button color="green" label="-" onClick={Subtract} />
         <Button color="red" label="Reset" onClick={Reset} />
-        <Button color="blue" label="-" onClick={Subtract} />
+        <Button color="blue" label="+" onClick={Add} />
+
+
       </div>
     </div>
   );

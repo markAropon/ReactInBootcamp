@@ -36,7 +36,7 @@ export default function PageAnimation({ children, keyValue }: PageAnimationProps
         ease: "easeInOut",
         duration: 0.4
       }}
-      className="w-full"
+      className="w-full h-full"
     >
       {children}
     </motion.div>

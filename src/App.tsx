@@ -4,8 +4,8 @@ import './App.css'
 import TypingTest from './pages/TypingTest'
 import Home from './pages/Home'
 import PageAnimation from './common/PageAnimation'
+import ToDo from './pages/ToDO'
 
-// AnimationRoutes component to handle route transitions
 const AnimatedRoutes = () => {
   const location = useLocation();
   
@@ -22,6 +22,11 @@ const AnimatedRoutes = () => {
             <TypingTest />
           </PageAnimation>
         } />
+        <Route path="/ToDo" element={
+          <PageAnimation keyValue={location.pathname}>
+            <ToDo />
+          </PageAnimation>
+        } />
       </Routes>
     </AnimatePresence>
   );
@@ -30,7 +35,7 @@ const AnimatedRoutes = () => {
 function App() {
   return (
     <BrowserRouter>
-      <main className="mx-auto py-6 px-4">
+      <main className="min-h-screen w-full">
         <AnimatedRoutes />
       </main>
     </BrowserRouter>
