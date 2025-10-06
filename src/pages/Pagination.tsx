@@ -2,6 +2,8 @@
 import { usePaginationHelper } from "@/helpers/PaginationHelper";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import PageAnimation from "../common/PageAnimation";
 
@@ -65,7 +67,7 @@ const PaginationPage: React.FC = () => {
 
     try {
       const created = await addUser(newUserName);
-      await successAlert("User Created! ID: " + created.id);
+      await successAlert("User Created!", `ID: ${created.id}`);
       setNewUserName("");
       setShowModal(false);
     } catch (err: any) {
@@ -92,6 +94,13 @@ const PaginationPage: React.FC = () => {
   return (
     <PageAnimation keyValue="pagination-page">
       <div className="min-h-screen w-full bg-gradient-to-br from-neutral-50 to-neutral-200 overflow-y-auto text-black relative">
+        <Link
+          to="/"
+          className="fixed top-6 left-6 bg-white border border-neutral-300 rounded-full shadow-md hover:bg-neutral-100 transition-colors p-3 z-50"
+        >
+          <FaHome className="text-black text-2xl" />
+        </Link>
+
         <div className="container mx-auto px-6 py-12">
           {/* Header */}
           <header className="mb-8 text-center">
@@ -227,7 +236,7 @@ const PaginationPage: React.FC = () => {
         {/* 🟢 Floating Action Button */}
         <button
           onClick={() => setShowModal(true)}
-          className="fixed bottom-8 right-8 w-14 h-14 bg-black text-white rounded-full shadow-lg hover:bg-neutral-800 flex items-center justify-center text-3xl transition"
+          className="fixed bottom-8 right-8 w-14 h-14 bg-black text-white rounded-full shadow-lg hover:bg-neutral-800 flex items-center justify-center text-3xl transition z-50"
           aria-label="Add User"
         >
           +
