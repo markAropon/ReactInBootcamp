@@ -7,7 +7,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Pagination from "./pages/Pagination";
 import { Page1, Page2, Page3, Page4, Page5 } from "./pages/RouterSample/index";
-import ToDo from "./pages/ToDo";
+// import ToDo from "./pages/ToDo";
+import ToDo from "./pages/ToDO";
 import TypingTest from "./pages/TypingTest";
 
 const AnimatedRoutes = () => {
