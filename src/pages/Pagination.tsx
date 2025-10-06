@@ -6,6 +6,8 @@ import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import PageAnimation from "../common/PageAnimation";
+// SWR version
+// import { usePaginationHelperSWR } from "@/helpers/usePaginationHelperSWR";
 
 const PaginationPage: React.FC = () => {
   const apiUrl = "http://localhost:3000/api/users";
@@ -23,6 +25,21 @@ const PaginationPage: React.FC = () => {
     handleNextPage,
     goToPage,
   } = usePaginationHelper(apiUrl, 5);
+  // SWR version
+  // const {
+  //   users,
+  //   currentPage,
+  //   totalPages,
+  //   loading,
+  //   error,
+  //   searchTerm,
+  //   setSearchTerm,
+  //   addUser,
+  //   deleteUser,
+  //   handlePrevPage,
+  //   handleNextPage,
+  //   goToPage,
+  // } = usePaginationHelperSWR(apiUrl, 5);
 
   const [newUserName, setNewUserName] = useState("");
   const [showModal, setShowModal] = useState(false);
