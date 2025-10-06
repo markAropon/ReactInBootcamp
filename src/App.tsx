@@ -4,14 +4,9 @@ import "./App.css";
 import HorizontalPageAnimation from "./common/HorizontalPageAnimation";
 import PageAnimation from "./common/PageAnimation";
 import Home from "./pages/Home";
-// import { Page1 } from "./pages/RouterSample/index";
 import Login from "./pages/Login";
 import Pagination from "./pages/Pagination";
-import Page1 from "./pages/RouterSample/Page1";
-import Page2 from "./pages/RouterSample/Page2";
-import Page3 from "./pages/RouterSample/Page3";
-import Page4 from "./pages/RouterSample/Page4";
-import Page5 from "./pages/RouterSample/Page5";
+import { Page1, Page2, Page3, Page4, Page5 } from "./pages/RouterSample/index";
 import ToDo from "./pages/ToDo";
 import TypingTest from "./pages/TypingTest";
 

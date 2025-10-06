@@ -1,5 +1,6 @@
-export * from './Page1';
-export * from './Page2';
-export * from './Page3';
-export * from './Page4';
-export * from './Page5';
+export { default as Page1 } from './Page1';
+export { default as Page2 } from './Page2';
+export { default as Page3 } from './Page3';
+export { default as Page4 } from './Page4';
+export { default as Page5 } from './Page5';
+

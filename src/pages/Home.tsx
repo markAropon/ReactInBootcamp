@@ -116,7 +116,7 @@ function Home() {
               </div>
               <div className="flex-grow flex items-center justify-center">
                 <img
-                  src="src/assets/navigation.svg"
+                  src="./src/assets/navigation.svg"
                   alt="Navigation illustration"
                   className="max-h-40 object-contain"
                 />

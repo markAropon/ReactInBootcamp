@@ -52,4 +52,6 @@ const Page3 = () => {
     </div>
   );
 };
+
 export default Page3;
+export { Page3 };
