@@ -39,6 +39,22 @@ function Home() {
               <p className="text-neutral-500">Manage your tasks efficiently</p>
             </div>
           </Link>
+          <Link to="/Login" className="group">
+            <div className="bg-white rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition transform hover:-translate-y-1">
+              <h2 className="text-2xl font-bold text-neutral-800 mb-2 group-hover:text-purple-600">
+                Login Page
+              </h2>
+              <p className="text-neutral-500">Access your account</p>
+            </div>
+          </Link>
+          <Link to="/Pagination" className="group">
+            <div className="bg-white rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition transform hover:-translate-y-1">
+              <h2 className="text-2xl font-bold text-neutral-800 mb-2 group-hover:text-purple-600">
+                Pagination
+              </h2>
+              <p className="text-neutral-500">Browse through users</p>
+            </div>
+          </Link>
         </div>
 
         {/* Widgets Section */}
