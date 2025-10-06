@@ -1,38 +1,34 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-
-interface PageAnimationProps {
+interface HorizontalPageAnimationProps {
   children: ReactNode;
   keyValue: string;
 }
-
-const pageVariants = {
+const horizontalPageVariants = {
   initial: {
     opacity: 0,
-    y: 20,
+    x: 100,
   },
-
   animate: {
     opacity: 1,
-    y: 0,
+    x: 0,
   },
   exit: {
     opacity: 0,
-    y: -20,
+    x: -100,
   },
 };
-
-export default function PageAnimation({
+export default function HorizontalPageAnimation({
   children,
   keyValue,
-}: PageAnimationProps) {
+}: HorizontalPageAnimationProps) {
   return (
     <motion.div
       key={keyValue}
       initial="initial"
       animate="animate"
       exit="exit"
-      variants={pageVariants}
+      variants={horizontalPageVariants}
       transition={{
         type: "tween",
         ease: "easeInOut",

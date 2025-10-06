@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom"
-import CounterPage from "../Components/CounterPage"
-import Stopwatch from "../Components/Stopwatch"
-import AgeSetter, { AgeProvider } from "@/Components/AgeSetter"
-import DogAxios from "./dogAxios"
+import AgeSetter, { AgeProvider } from "@/Components/AgeSetter";
+import { Link } from "react-router-dom";
+import CounterPage from "../Components/CounterPage";
+import Stopwatch from "../Components/Stopwatch";
+import DogAxios from "./dogAxios";
 
 function Home() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 to-slate-100 overflow-y-auto">
       <div className="container mx-auto px-6 py-12 space-y-12">
-        
         {/* Hero Section */}
         <header className="text-center space-y-4 ">
           <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
             React Playground 🚀
           </h1>
           <p className="text-neutral-600 text-lg">
-            React in BootCamp - A collection of React projects and components activities.
+            React in BootCamp - A collection of React projects and components
+            activities.
           </p>
         </header>
         {/* Feature Links */}
@@ -25,7 +25,9 @@ function Home() {
               <h2 className="text-2xl font-bold text-neutral-800 mb-2 group-hover:text-indigo-600">
                 Typing Test
               </h2>
-              <p className="text-neutral-500">Test your typing speed and accuracy</p>
+              <p className="text-neutral-500">
+                Test your typing speed and accuracy
+              </p>
             </div>
           </Link>
 
@@ -43,7 +45,9 @@ function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
             <div className="mb-4">
-              <h2 className="text-xl font-bold text-neutral-800 mb-4">Counter</h2>
+              <h2 className="text-xl font-bold text-neutral-800 mb-4">
+                Counter
+              </h2>
             </div>
             <div className="flex-grow flex items-center justify-center">
               <CounterPage />
@@ -55,7 +59,9 @@ function Home() {
               <div className="mb-4">
                 <h2 className="text-xl font-bold text-neutral-800 mb-2">
                   Age Setter <br />
-                  <span className="text-sm text-neutral-500">(useReducer + Context)</span>
+                  <span className="text-sm text-neutral-500">
+                    (useReducer + Context)
+                  </span>
                 </h2>
               </div>
               <div className="flex-grow flex items-center justify-center">
@@ -66,7 +72,9 @@ function Home() {
 
           <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
             <div className="mb-4">
-              <h2 className="text-xl font-bold text-neutral-800 mb-4">Stopwatch</h2>
+              <h2 className="text-xl font-bold text-neutral-800 mb-4">
+                Stopwatch
+              </h2>
             </div>
             <div className="flex-grow flex items-center justify-center">
               <Stopwatch />
@@ -75,16 +83,34 @@ function Home() {
 
           <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
             <div className="mb-4">
-              <h2 className="text-xl font-bold text-neutral-800 mb-4">Dog Image</h2>
+              <h2 className="text-xl font-bold text-neutral-800 mb-4">
+                Dog Image
+              </h2>
             </div>
             <div className="flex-grow flex items-center justify-center">
               <DogAxios />
             </div>
           </div>
+          <Link to="/Page1" className="group">
+            <div className="bg-white/80 backdrop-blur-lg rounded-xl p-6 shadow-md border border-neutral-200 hover:shadow-xl transition flex flex-col h-[280px]">
+              <div className="mb-4">
+                <h2 className="text-xl font-bold text-neutral-800 mb-4">
+                  React Router Dom
+                </h2>
+              </div>
+              <div className="flex-grow flex items-center justify-center">
+                <img
+                  src="src/assets/navigation.svg"
+                  alt="Navigation illustration"
+                  className="max-h-40 object-contain"
+                />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
